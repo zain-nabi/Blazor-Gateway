@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    // New Triton Web API
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "strd003-001-site1.itempurl.com"
+        }
+      ],
+      "UpstreamPathTemplate": "/blazor-api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:7000"
+  }
+}
